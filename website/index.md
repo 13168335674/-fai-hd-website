@@ -16,6 +16,25 @@ footer: Open-source MIT Licensed | Copyright © 2023<br />
 # 安装脚手架
 $ pnpm add @fai-hd/hd-sfc-cli -D
 
+# 添加配置文件 hd-sfc-cli.config.js
+
+import { defineConfig } from "@fai-hd/hd-sfc-cli";
+
+export default defineConfig({
+  bundler: "esbuild",
+  jsConfig: {
+    input: "index.mjs",
+    output: "index.src.js",
+    outputPath: "[origin]",
+  },
+  cssConfig: {
+    extract: true,
+    input: "[origin]",
+    output: "[name].src.css",
+    outputPath: "/css/",
+  },
+});
+
 # 添加scripts
 $ code package.json
 
@@ -25,7 +44,7 @@ $ code package.json
 }
 
 # 开发模式
-$ pnpm build
+$ pnpm dev
 
 # 开始打包
 $ pnpm build

@@ -1,7 +1,7 @@
 import { defineConfig } from 'dumi';
 
 export default defineConfig({
-  title: '@fai-hd',
+  logo: false,
   resolve: {
     docDirs: ['./website'],
   },
@@ -11,22 +11,23 @@ export default defineConfig({
   // },
   // mfsu: false,
   themeConfig: {
+    name: '@fai-hd',
     nav: [
       {
-        title: '快速上手',
+        title: '指南',
         link: '/getting-started',
       },
       {
         title: '配置',
         link: '/config',
       },
-      {
-        title: 'GitHub',
-        link: 'https://github.com/13168335674/fai-hd-website',
-      },
+      // {
+      //   title: 'GitHub',
+      //   link: 'https://github.com/13168335674/fai-hd-website',
+      // },
     ],
   },
   base: '/fai-hd-website/',
   publicPath: '/fai-hd-website/',
-  outputPath: './dist-website',
+  outputPath: './fai-hd-website',
 });
